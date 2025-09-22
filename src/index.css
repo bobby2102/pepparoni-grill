@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Self+Modern:wght@400;500;600;700&display=swap");
+
+/* @font-face {
+  font-family: "De Latto";
+  src: url("/src/assets/fonts/de-latto/DeLatto.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* @font-face {
+  font-family: "italian-breakfast";
+  src: url("/src/assets/fonts/paraline/fonts/fonnts.com-Praline-Regular.otf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "Sonophone";
+  src: url("/src/assets/fonts/SonophonebyLayerform/Sonophone.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer utilities {
+  .border-pattern {
+    border: 12px solid transparent; /* adjust thickness */
+    border-image-source: url("/src/assets/bg.png");
+    border-image-slice: 50; /* controls how image is cut */
+    border-image-repeat: round; /* repeat / stretch / round */
+  }
+}
+
+@layer utilities {
+  .border-pattern-dark-bg {
+    border: 12px solid transparent; /* adjust thickness */
+    border-image-source: url("/src/assets/white_pattern.png");
+    border-image-slice: 50; /* controls how image is cut */
+    border-image-repeat: round; /* repeat / stretch / round */
+  }
+}
+
+@layer utilities {
+  .rounded-pattern {
+    position: relative;
+    border-radius: 1rem; /* adjust rounding */
+    padding: 1rem;
+  }
+
+  .rounded-pattern::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 5px; /* border thickness */
+    background: url("/src/assets/bg.png") repeat;
+    -webkit-mask: linear-gradient(#e2e531 0 0) content-box,
+      linear-gradient(#e2e531 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+body {
+  @apply bg-white font-poppins;
+}
+
+h1 {
+  @apply font-italiana lg:text-[100px] text-[65px] leading-[80px]  font-bold;
+}
+
+h2 {
+  @apply font-italiana lg:text-[60px] text-[56px]   font-bold;
+}
+
+h3 {
+  @apply font-italiana font-medium lg:text-[53px] text-[32px];
+}
+
+h4 {
+  @apply font-italiana lg:text-[38px] text-[30px];
+}
+a {
+  @apply text-base font-semibold transition-all duration-300 font-poppins sm:text-base;
+}
+
+p {
+  @apply font-poppins  leading-normal tracking-wider md:text-[20px] text-sm font-bold;
+}
