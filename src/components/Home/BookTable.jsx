@@ -18,7 +18,7 @@ export default function BookTable() {
     try {
       setLoading(true);
       const res = await axios.post(
-        "https://my-pepperoni-backend.onrender.com/book-table",
+        "https://pepgrill-backend.onrender.com/book-table",
         data
       );
 

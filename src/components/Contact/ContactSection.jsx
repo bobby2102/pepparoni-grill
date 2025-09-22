@@ -16,7 +16,7 @@ export default function ContactSection() {
     try {
       setLoading(true);
       const res = await axios.post(
-        "https://my-pepperoni-backend.onrender.com/contact-form",
+        "https://pepgrill-backend.onrender.com/contact-form",
         data
       );
 
