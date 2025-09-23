@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import image from "../../assets/bannerimage.jpg";
+import image from "../../assets/cat/1.jpg";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 
@@ -44,7 +44,7 @@ export default function BookTable() {
       }}
     >
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/70"></div>
 
       {/* Content */}
       <motion.div

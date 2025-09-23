@@ -3,8 +3,8 @@ import { ArrowRight, ExternalLink, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "../../assets/pepperoni-logo.png";
 
-import heroBg from "../../assets/carousel/Hero44B.jpg";
-import heroBgMobile from "../../assets/carousel/Hero44B.jpg";
+import heroBg from "../../assets/cat/3.jpg";
+import heroBgMobile from "../../assets/cat/5.jpg";
 
 import CommonButton from "./CommonButton";
 import { useLocation } from "react-router-dom";

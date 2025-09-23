@@ -14,7 +14,7 @@ export default function HomePage() {
     <>
       {" "}
       <OrderNowPopup />
-      <ServiceOptions />
+      {/* <ServiceOptions /> */}
       <AboutUs />
       {/* <Banner /> */}
       <SignatureBites />
